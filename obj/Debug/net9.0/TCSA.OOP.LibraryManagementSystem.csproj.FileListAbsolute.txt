@@ -15,3 +15,4 @@ C:\Users\virtfer\Documents\Coding\TCSA.OOP.LibraryManagementSystem\obj\Debug\net
 C:\Users\virtfer\Documents\Coding\TCSA.OOP.LibraryManagementSystem\obj\Debug\net9.0\TCSA.OOP.LibraryManagementSystem.pdb
 C:\Users\virtfer\Documents\Coding\TCSA.OOP.LibraryManagementSystem\obj\Debug\net9.0\TCSA.OOP.LibraryManagementSystem.genruntimeconfig.cache
 C:\Users\virtfer\Documents\Coding\TCSA.OOP.LibraryManagementSystem\obj\Debug\net9.0\ref\TCSA.OOP.LibraryManagementSystem.dll
+C:\Users\virtfer\Documents\Coding\TCSA.OOP.LibraryManagementSystem\obj\Debug\net9.0\TCSA.OOP.LibraryManagementSystem.sourcelink.json

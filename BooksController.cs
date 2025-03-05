@@ -3,9 +3,9 @@ using TCSA.OOP.LibraryManagementSystem.Models;
 
 namespace TCSA.OOP.LibraryManagementSystem;
 
-internal  class BooksController {
+internal class BooksController : IBaseController {
 
-    internal  void ViewBooks() {
+    internal  void ViewItems() {
 
         var table = new Table();
         table.Border(TableBorder.Rounded);
@@ -38,7 +38,7 @@ internal  class BooksController {
     }
 
 
-    internal  void AddBook() {
+    internal  void AddItem() {
 
         var title = AnsiConsole.Ask<string>("Enter the [green]title[/] of the book to add:");
         var author = AnsiConsole.Ask<string>("Enter the [green]author[/] of the book:");
@@ -61,11 +61,7 @@ internal  class BooksController {
         Console.ReadKey();
     }
 
-    internal  void DeleteBook() {
-
-        // var title = AnsiConsole.Ask<string>("Enter the [red]title[/] of the book to remove.");
-
-        
+    internal  void DeleteItem() {
 
         var books = MockDatabase.LibraryItems.OfType<Book>().ToList();
 

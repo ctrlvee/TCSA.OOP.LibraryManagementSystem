@@ -65,27 +65,30 @@ internal  class BooksController {
 
         // var title = AnsiConsole.Ask<string>("Enter the [red]title[/] of the book to remove.");
 
-        // if (MockDatabase.LibraryItems.OfType<Book>().Any(b => b.Name.Equals(title, StringComparison.OrdinalIgnoreCase))) {
-        //     MockDatabase.LibraryItems
-        // }
-        // AnsiConsole.MarkupLine("Press Any Key to Continue");
-        // Console.ReadKey();
-        // //  if (MockDatabase.Books.Count == 0) {
-        //         AnsiConsole.MarkupLine("[red]No books available to delete.[/]");
-        //         Console.ReadKey();
-        //         return;
-        //     }
+        
 
-        //     var bookToDelete = AnsiConsole.Prompt(new SelectionPrompt<Book>().Title("Select a [red]book[/] to delete:").UseConverter(b => $"{b.Name}").AddChoices(MockDatabase.Books));
+        var books = MockDatabase.LibraryItems.OfType<Book>().ToList();
 
-        //     if (MockDatabase.Books.Remove(bookToDelete)) {
-        //         AnsiConsole.MarkupLine("[red]Book deleted successfully![/]");
-        //     } else {
-        //         AnsiConsole.MarkupLine("[red]Book not found.[/]");
-        //     }   
+        if (books.Count == 0) {
+            AnsiConsole.MarkupLine("[red]No books available to delete.[/]");
+            Console.ReadKey();
+            return;
+        }
 
-        //     AnsiConsole.MarkupLine("Press any key to continue.");
-        //     Console.ReadKey();
+        var bookToDelete = AnsiConsole.Prompt(new SelectionPrompt<Book>().Title("Select a [red]book[/] to delete:").AddChoices(books));
+
+        if (MockDatabase.LibraryItems.Remove(bookToDelete))
+        {
+            AnsiConsole.MarkupLine("[red]Book deleted successfully![/]");
+        }
+        else
+        {
+            AnsiConsole.MarkupLine("[red]Book not found.[/]");
+        }
+
+        AnsiConsole.MarkupLine("Press any key to continue.");
+        Console.ReadKey();
+
     }
 
 }

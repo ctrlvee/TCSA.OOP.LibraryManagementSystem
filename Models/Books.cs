@@ -1,3 +1,4 @@
+using Spectre.Console;
 namespace TCSA.OOP.LibraryManagementSystem.Models;
 
 internal class Book : LibraryItem

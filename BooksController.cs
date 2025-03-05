@@ -1,4 +1,5 @@
 using Spectre.Console;
+using TCSA.OOP.LibraryManagementSystem.Models;
 
 namespace TCSA.OOP.LibraryManagementSystem;
 
@@ -62,9 +63,14 @@ internal  class BooksController {
 
     internal  void DeleteBook() {
 
-        
-        AnsiConsole.Mar
-        //  if (MockDatabase.Books.Count == 0) {
+        // var title = AnsiConsole.Ask<string>("Enter the [red]title[/] of the book to remove.");
+
+        // if (MockDatabase.LibraryItems.OfType<Book>().Any(b => b.Name.Equals(title, StringComparison.OrdinalIgnoreCase))) {
+        //     MockDatabase.LibraryItems
+        // }
+        // AnsiConsole.MarkupLine("Press Any Key to Continue");
+        // Console.ReadKey();
+        // //  if (MockDatabase.Books.Count == 0) {
         //         AnsiConsole.MarkupLine("[red]No books available to delete.[/]");
         //         Console.ReadKey();
         //         return;
